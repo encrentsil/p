@@ -50,7 +50,7 @@ export const updateStatement = async (req,res) => {
 }
 
 export const deleteStatement = async (req,res) => {
-    const deleteId = req.body
-    await StatementModel.findByIdAndDelete(req.params.id)
+    
+   const deleteData = await StatementModel.findByIdAndDelete(req.params.id)
     res.status(200).send('statement deleted')
 }
